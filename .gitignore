@@ -1,1 +1,5 @@
-datatest/
+.venv/
+dataset/
+data/
+__pycache__/
+*.pyc
