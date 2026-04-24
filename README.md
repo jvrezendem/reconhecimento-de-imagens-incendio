@@ -46,6 +46,46 @@ O modelo contém três blocos principais de convolução, cada um acompanhado po
 
 ---
 
+## Aumento de Dados
+
+Durante o treinamento do modelo, foi aplicada a técnica de **aumento de dados** (*data augmentation*), que consiste em gerar variações artificiais das imagens originais para tornar o modelo mais robusto.
+
+Essa técnica é muito utilizada em projetos de visão computacional, principalmente quando o conjunto de imagens é limitado ou quando se deseja melhorar a capacidade de generalização da rede neural.
+
+Na prática, o aumento de dados permite que o modelo veja diferentes versões de uma mesma imagem durante o treinamento, como:
+
+- rotações leves;
+- espelhamento horizontal;
+- zoom;
+- pequenas alterações de enquadramento.
+
+Dessa forma, a rede neural aprende a reconhecer padrões importantes relacionados à presença de incêndio, sem depender da posição exata da imagem.
+
+---
+
+### Benefícios
+
+O uso de aumento de dados traz vantagens importantes:
+
+- Reduz o **overfitting**;
+- Melhora a capacidade de generalização;
+- Torna o modelo mais resistente a variações reais;
+- Aumenta a eficiência do treinamento sem precisar de mais dados reais.
+
+---
+
+### Aplicação no projeto
+
+No contexto deste projeto, o aumento de dados ajuda o modelo a identificar incêndios em diferentes condições, como:
+
+- variação de iluminação;
+- diferentes ângulos da imagem;
+- presença de fumaça em posições variadas;
+- tamanhos diferentes de focos de incêndio;
+- cenários ambientais distintos.
+
+---
+
 ## Dados
 O modelo foi treinado com o dataset criado em `datatest`, dividido em duas classes ***incendio***, e ***naoIncendio***. O dataset conta com mais de 4500 imagens divididas igualmente entre as classes.
 
